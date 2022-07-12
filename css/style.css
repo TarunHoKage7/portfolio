@@ -11,7 +11,7 @@
   /* LAYOUT
   /*******************************************/
   body,html{
-    background: url("/assets/Word-Art1.jpeg");
+    /*background: url("/assets/Word-Art1.jpeg");*/
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 0;
     padding: 0 0;
@@ -161,7 +161,7 @@
     background-color: aliceblue;
   }
 
-  #sec6 > img{
+  #sec6 img{
     margin: 0 0;
     display: block;
   }
@@ -234,7 +234,6 @@
   }
 
   #sec12{
-    background-color: rgb(251, 231, 206);
     border-bottom:3px solid black;
     border-right:3px solid black;
     float: left;
@@ -242,6 +241,7 @@
   }
 
   #sec12 > a{
+    box-shadow: 15px 10px 15px rgb(17, 101, 101);
     text-decoration: none;
     color: black;
   }
