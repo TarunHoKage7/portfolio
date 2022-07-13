@@ -47,7 +47,15 @@
     font-size: x-large;
   }
 
+  nav > ul a{
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
   #nav-title{
+    cursor:default;
     background-color: rgb(251, 231, 206);
     border-left: 3px solid black;
     border-right:3px solid black;
@@ -158,7 +166,7 @@
     float: left;
     width: fit-content;
     width: -moz-fit-content;
-    background-color: aliceblue;
+    background-color: rgb(249, 249, 207);
   }
 
   #sec6 img{
@@ -217,6 +225,7 @@
   }
 
   #sec10{
+    background: url("/assets/Word-Art1.jpeg");
     clear:both;
     border-bottom:3px solid black;
     border-left:3px solid black;
