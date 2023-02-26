@@ -7,19 +7,29 @@
     box-sizing: border-box;
   }
   
+
+  :root{
+    --border-color: rgb(170, 156, 146);
+    --shaded-background-color: rgb(247, 231, 206);
+    --footer-shade: rgb(162, 163, 170);
+    --light-background-color: rgb(255, 255, 255);
+    --border: 3px solid rgb(170, 156, 146);
+  }
   /******************************************
   /* LAYOUT
   /*******************************************/
   body,html{
     /*background: url("/assets/Word-Art1.jpeg");*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0 0;
     padding: 0 0;
     scroll-behavior: smooth;
+    background-color: var(--light-background-color);
+    border-left: var(--border);
+    border-right: var(--border);
   }
 
   nav{
-    border: 3px solid black;
     left: 0;
     top: 0;
     margin: 0 0;
@@ -49,30 +59,36 @@
 
   nav > ul a{
     text-decoration: none;
-    color: black;
+    color: var(--border-color);
     font-size: x-large;
     font-weight: bolder;
   }
 
   #nav-title{
     cursor:default;
-    background-color: rgb(251, 231, 206);
-    border-left: 3px solid black;
-    border-right:3px solid black;
-    margin: 0 500px 0 0;
-    padding: 30px 200px;
+    background-color: var(--shaded-background-color);
+    border-left: var(--border);
+    border-right:var(--border);
+    margin: 0 10% 0 0;
+    padding: 30px 6%;
     font-size: xx-large;
   }
 
+  .row{
+    display: flex;
+    align-content: stretch;
+    height: 80%;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+
   #sec1{
-    border: 3px solid black;
     float: left;
-    height: fit-content;
-    height: -moz-fit-content;
+    height: 80%;
     margin: 0 0;
     padding: 0 0;
-    width: fit-content;
     width: -moz-fit-content;
+    width: fit-content;
   }
 
   #sec1 > img{
@@ -80,11 +96,9 @@
   }
 
   #sec2{
-    border-bottom: 3px solid black;
-    border-right:3px solid black;
+    border-right: var(--border);
     float: left;
-    width: 40%;
-    padding: 100px 100px 444px 100px;
+    padding: 10.4% 10% 19% 10%;
   }
 
   #sec2 > h1{
@@ -97,13 +111,8 @@
   }
 
   #sec3{
-    background-color: rgb(251, 231, 206);
-    border-right:3px solid black;
-    border-bottom: 3px solid black;
-    float: left;
-    width: 598px;
-    min-height: 100%;
-    padding: 100px 100px 400px 100px;
+    background-color: var(--shaded-background-color);
+    padding: 10% 3% 3% 3%;
   }
 
   #sec3 > h2{
@@ -116,81 +125,54 @@
   }
 
   #sec4{
-    clear:both;
-    border-bottom:3px solid black;
-    border-left:3px solid black;
-    border-right:3px solid black;
-    float: left;
+    border-right:2px solid var(--border-color);
     min-height: 100%;
     padding: 100px 100px 142px 100px;
   }
 
   #sec4 > a > img{
-    box-shadow: 3px 3px 20px rgb(252, 205, 148);
+    box-shadow: 3px 3px 20px var(--shaded-background-color);
   }
 
   #sec4 a ~a{
     text-decoration: none;
     font-size: larger;
     text-align: center;
-    color: black;
+    color: var(--border-color);
   }
 
   #sec5{
-    background-color: rgb(251, 231, 206);
-    border-right:3px solid black;
-    border-bottom: 3px solid black;
-    float: left;
+    background-color: var(--shaded-background-color);
+    border-right:3px solid var(--border-color);
     width: 685px;
     min-height: 100%;
     padding: 100px 100px 388px 100px;
   }
 
   #left-arrow{
-    background-color: rgb(248, 245, 241);
+    background-color: var(--footer-shade);
     font-size: xx-large;
     margin-left: -100px;
     padding: 25px;
+    cursor: pointer;
   }
 
   #right-arrow{
-    background-color: rgb(248, 245, 241);
+    background-color: var(--footer-shade);
     font-size: xx-large;
     margin-left: 510px;
     padding: 25px;
+    cursor: pointer;
   }
 
   #sec6{
-    border-right:3px solid black;
-    border-bottom: 3px solid black;
-    float: left;
-    width: fit-content;
-    width: -moz-fit-content;
-    background-color: rgb(249, 249, 207);
-  }
-
-  #sec6 img{
-    margin: 0 0;
-    display: block;
-  }
-
-  #sec6 > a{
-    text-decoration: none;
-    color: black;
-  }
-
-  #sec6 h2{
-    display: inline;
-    margin-left: 250px;
+    background: url("/public/assets/Word-Art1.jpeg");
+    object-fit: cover;
   }
 
   #sec7{
-    background-color: rgb(251, 231, 206);
-    clear:both;
-    border-bottom:3px solid black;
-    border-left:3px solid black;
-    border-right:3px solid black;
-    float: left;
+    background-color: var(--shaded-background-color);
+    border-right:3px solid var(--border-color);
     padding: 100px 100px 142px 100px;
   }
 
@@ -200,13 +182,11 @@
     font-size: larger;
   }
   #sec7 li{
-    padding: 5px;
+    padding: 5px 5px 5px 0;
   }
 
   #sec8{
-    border-right:3px solid black;
-    border-bottom: 3px solid black;
-    float: left;
+    border-right:3px solid var(--border-color);
     width: 685px;
     min-height: 100%;
     padding: 100px 100px 397px 100px;
@@ -214,10 +194,7 @@
 
 
   #sec9{
-    background-color: rgb(251, 231, 206);
-    border-right:3px solid black;
-    border-bottom: 3px solid black;
-    float: left;
+    background-color: var(--shaded-background-color);
     font-size: x-large;
     width: 625px;
     min-height: 100%;
@@ -225,34 +202,42 @@
   }
 
   #sec10{
-    background: url("/assets/Word-Art1.jpeg");
-    clear:both;
-    border-bottom:3px solid black;
-    border-left:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 286px 500px 266px 100px;
+    border-right:3px solid var(--border-color);
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: var(--shaded-background-color);
   }
 
+  #sec10 img{
+    margin: 0 0;
+    display: block;
+  }
+
+  #sec10 > a{
+    text-decoration: none;
+    color: var(--border-color);
+  }
+
+  #sec10 h2{
+    display: inline;
+    margin-left: 250px;
+  }
+
+
   #sec11{
-    background-color: rgb(251, 231, 206);
-    border-bottom:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 200px 300px 266px 100px;
+    background-color: var(--shaded-background-color);
+    border-right:3px solid var(--border-color);
+    padding: 200px 4% 266px 4%;
   }
 
   #sec12{
-    border-bottom:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 0px 127px 0px 128px;
+    padding: 0px 2% 0px 2%;
   }
 
   #sec12 > a{
     box-shadow: 15px 10px 15px rgb(17, 101, 101);
     text-decoration: none;
-    color: black;
+    color: var(--border-color);
   }
 
   #sec12 h2{
@@ -260,26 +245,23 @@
   }
 
   #sec13{
-    clear: both;
-    background-color: rgb(248, 245, 241);
-    border-bottom:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 50px 264px 42px 264px;
+    background-color: var(--footer-shade);
+    border-right:3px solid var(--border-color);
+    padding: 50px 12% 42px 12%;
+  }
+
+  #sec13 > h2 > a, #sec14 > h2 > a{
+    text-decoration: none;
+    color: black;
   }
 
   #sec14{
-    background-color: rgb(248, 245, 241);
-    border-bottom:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 50px 264px 42px 264px;
+    background-color: var(--footer-shade);
+    border-right:3px solid var(--border-color);
+    padding: 50px 12% 42px 12%;
   }
 
   #sec15{
-    background-color: rgb(248, 245, 241);
-    border-bottom:3px solid black;
-    border-right:3px solid black;
-    float: left;
-    padding: 71px 201px 71px 205px;
+    background-color: var(--footer-shade);
+    padding: 71px 12% 71px 12%;
   }
