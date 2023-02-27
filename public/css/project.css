@@ -69,7 +69,7 @@ nav > ul{
   }
 
   #nav-title{
-    cursor:default;
+    cursor: pointer;
     background-color: var(--shaded-background-color);
     border-left: var(--border);
     border-right:var(--border);
