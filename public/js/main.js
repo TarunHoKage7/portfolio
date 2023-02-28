@@ -25,6 +25,10 @@ let experiencePageData = {
     }
 };
 
+let isMobile = checkMobileScreen();
+if(isMobile) {
+    setTimeout( eraseDisplay(), 10000);
+}
 addEventListeners();
 changeExperienceTileData();
 
@@ -58,6 +62,21 @@ function rightArrowClicked() {
     document.querySelector("#experience-tile > p").innerText = experiencePageData[index]["about"];
     document.querySelector("#experience-tile > img").src = experiencePageData[index]["imgsrc"];
     document.querySelector("#experience-tile > p").alt = experiencePageData[index]["imgalt"];
+}
+
+function checkMobileScreen(){
+    if (typeof screen.orientation !== 'undefined') { 
+        alert("This website was built as a desktop-first site. For a better experience, I recommend you open this website on a bigger screen(laptop or desktop).");
+        return 1;
+    }
+    return 0;
+}
+
+function eraseDisplay() {
+    
+    document.querySelector("body").style.display = "none";
+    document.querySelector("body").style.backgroundColor = "#121e26"
+    document.querySelector("body").style.border = "3px solid #00d5ff";
 }
 
 

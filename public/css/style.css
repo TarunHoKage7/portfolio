@@ -72,13 +72,13 @@
     background-color: var(--shaded-background-color);
     border-left: var(--border);
     border-right:var(--border);
-    margin: 0 0 0 0;
+    margin: 0 0;
     padding: 30px 5% 30px 5%;
     font-size: 150%;
   }
 
-  #nav > ul > li:nth-child(2){
-    margin-left: 10%;
+  nav > ul > li:nth-child(n + 1){
+    margin-left: 5%;
   }
 
   .row{
@@ -102,12 +102,14 @@
 
   #sec1 > img{
     display: block;
+    border-bottom: var(--border);
   }
 
   #sec2{
     border-right: var(--border);
+    border-left: var(--border);
     float: left;
-    padding: 10.4% 10% 19% 10%;
+    padding: 10.4% 8% 19% 8%;
   }
 
   #sec2 > h1{
@@ -121,7 +123,7 @@
 
   #sec3{
     background-color: var(--shaded-background-color);
-    padding: 10% 3% 3% 3%;
+    padding: 10% 2% 3% 2%;
   }
 
   #sec3 > h2{
@@ -136,7 +138,7 @@
   #sec4{
     border-right:2px solid var(--border-color);
     min-height: 100%;
-    padding: 15% 3% 142px 3%;
+    padding: 15% 5% 142px 5%;
   }
 
   #sec4 > a > img{
@@ -187,11 +189,11 @@
   }
 
   #experience-tile img{
-    padding: 30% 0 0 20%;
+    padding: 30% 20% 0 20%;
   }
 
   #sec6{
-    width: 100%;
+    width: 30%;
     height: 100%;
   }
 
@@ -221,7 +223,7 @@
     border-right:3px solid var(--border-color);
     width: 685px;
     min-height: 100%;
-    padding: 100px 100px 397px 100px;
+    padding: 100px 10% 397px 10%;
   }
 
 
@@ -230,7 +232,7 @@
     font-size: x-large;
     width: 625px;
     min-height: 100%;
-    padding: 100px 100px 217px 140px;
+    padding: 100px 5% 217px 5%;
   }
 
   #sec10{
@@ -263,9 +265,9 @@
   }
 
   #sec12{
-    width: 100%;
+    width: 80%;
     height: 100%;
-    padding: 7% 4% 0px 4%;
+    padding: 7% 2% 0 2%;
   }
 
   #sec12 > a{
@@ -275,12 +277,13 @@
   }
 
   #sec12 img{
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
   }
 
   #sec12 h2{
-    padding-left: 100px;
+
+    padding-left: 10%;
   }
 
   #sec13{
@@ -308,3 +311,144 @@
     padding: 20px 12% 19px 12%;
     height: 40%;
   }
+
+  @media screen and (max-width:1024px) {
+    body{
+      font-size: small;
+    }
+
+    nav > ul > li:nth-child(n + 1){
+      margin-left: 3%;
+      font-size: 140%;
+    }
+
+    #sec1{
+      width: 100%;
+      height: 100%;
+    }
+
+    #sec1 img{
+      border-bottom: var(--border);
+      width: 100%;
+      width: 100%;
+    }
+
+    #sec2{
+      border-left: var(--border);
+    }
+
+    #sec2 h1{
+      margin-left: 0;
+    }
+    #sec12{
+      display: block;
+      width: 80%;
+      height: 100%;
+      padding: 10% 2% 0 2%;
+    }
+
+    #experience-tile img{
+      padding: 30% 10% 0 10%;
+      height: 100%;
+      width: 100%;
+    }
+
+    #sec6{
+      margin-top: 10%;
+    }
+
+    #sec6 ul{
+      padding: 0 0;
+    }
+
+    #sec7 {
+      font-size: 70%;
+    }
+    #sec7 >ul{
+      font-size: 80%;
+      margin-left: -30%;
+    }
+
+    #sec8{
+      width: 50%;
+      padding: 20% 8%;
+    }
+
+    #sec9{
+      font-size: medium;
+    }
+
+    #sec10 {
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    #sec10 h2{
+      padding-top: 20px;
+      margin-left: 30%;
+    }
+
+    #sec10 img{
+      object-fit: scale-down;
+      max-width: 100%;
+    }
+
+    #sec12 img{
+      width: 100%;
+      height: 100%;
+    }
+
+    #sec12 h2{
+      padding-left: 50px;
+    }
+
+    #sec15{
+      font-size: smaller;
+      padding: 20px 6% 19px 6%;
+      height: 40%;
+    }
+  }
+
+  @media screen and (max-width:768px){
+
+    #nav-title{
+      padding: 30px 1% 30px 1%;
+      font-size: 120%;
+    }
+
+    nav > ul > li:nth-child(n + 1){
+      margin-left: 1%;
+      font-size: 100%;
+    }
+
+    #sec4 {
+      border-right:2px solid var(--border-color);
+      min-height: 80%;
+      padding: 15% 2% 142px 10%;
+    }
+
+    #sec4 img{
+      width: 60%;
+    }
+
+    #sec8{
+      width: 30%;
+      padding: 20% 2%;
+    }
+
+    #sec9 {
+      font-size: small;
+    }
+
+    #sec15{
+      display: block;
+
+      font-size: smaller;
+      padding: 20px 2% 19px 2%;
+      font-size: 10%;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
