@@ -3,19 +3,25 @@ let experiencePageData = {
     0: {
         title: "Cloud Support Associate Intern - AWS",
         time: "March 2023 - July 2023",
-        about: "-This is my ongoing internship at amazon web services(aws) as a cloud support associate intern."
+        about: "-This is my ongoing internship at amazon web services(aws) as a cloud support associate intern.",
+        imgsrc: "/public/assets/aws_img.png",
+        imgalt: "aws logo"
     },
 
     1: {
         title: "Public Speaker -ACM Student chapter",
         time: "November 2021 - Present",
-        about: "-Spoke at workshops on Web-development, Github, and cybersecurity. I was also a part of the organizing committee of a city-level hackathon."
+        about: "-Spoke at workshops on Web-development, Github, and cybersecurity. I was also a part of the organizing committee of a city-level hackathon.",
+        imgsrc: "/public/assets/acm_img.png",
+        imgalt: "acm logo"
     },
 
     2: {
         title: "Machine Learning intern at zebo.ai",
         time: "April 2021 - May 2021",
-        about: "-We have worked on a model to classify & localize a target feature. I was coordinating our team's tasks and was part of the data mining team."
+        about: "-We have worked on a model to classify & localize a target feature. I was coordinating our team's tasks and was part of the data mining team.",
+        imgsrc: "/public/assets/zebo_img.png",
+        imgalt: "zebo logo"
     }
 };
 
@@ -50,6 +56,8 @@ function rightArrowClicked() {
     document.querySelector("#experience-tile > h2").innerText = experiencePageData[index]["title"];
     document.querySelector("#experience-tile > h4").innerText = experiencePageData[index]["time"];
     document.querySelector("#experience-tile > p").innerText = experiencePageData[index]["about"];
+    document.querySelector("#experience-tile > img").src = experiencePageData[index]["imgsrc"];
+    document.querySelector("#experience-tile > p").alt = experiencePageData[index]["imgalt"];
 }
 
 
