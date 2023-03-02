@@ -25,10 +25,9 @@ let experiencePageData = {
     }
 };
 
-let isMobile = checkMobileScreen();
-if(isMobile) {
-    setTimeout( eraseDisplay(), 10000);
-}
+//if(checkMobileScreen()) {
+//    setTimeout( eraseDisplay(), 10000);
+//}
 addEventListeners();
 changeExperienceTileData();
 
